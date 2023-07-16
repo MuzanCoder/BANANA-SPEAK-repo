@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana speak</title>
     <style>
+        body {
+            background-image: url('image/Minion.jpg');
+            background-size: cover;
+          }
+        h1 {
+            background-color: yellowgreen;
+            height: 10vh;
+            padding: 3rem;
+          }
+        .scrolling-text {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+      
+          .scrolling-text marquee {
+            width: 100%;
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+          }
+      
+          @keyframes marquee {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+          
         textarea {
             width: 80%;
             height: 10vh;
@@ -20,16 +47,33 @@
             padding: 1rem;
         }
 
+        button {
+        background: yellowgreen;
+        display: inline-block;
+        padding: 20px;
+        border: 1px; 
+        color: black;
+        }
     </style>
     
 </head>
 <body>
-    <h1> Talk Banana</h1>
+    <h1 style="text-align: center;">Speak Minion Language.</h1>
     <textarea id="txt-input" placeholder="Put Your Text Here"></textarea>
     <button id="btn-translate">Translate</button>
-    <div style="font-size: larger;">output will come Here 👇</div>
-    <div id="output"></div>
+    <h2 class="container" style="text-align: center;"   
+    style="font-size: larger;">output will come Here 👇🏻</h2>
+    <div class=".Button" id="output"></div>
     <script src="app.js" type="text/javascript"></script>
+    
+    <hr>
+
+    <h2 style="text-align: center;">mobla ba app nunu agei leg to loka :)</h2>
+    <div class="scrolling-text">
+        <marquee behavior="scroll" direction="right">
+            BANANANA
+        </marquee>
+      </div>
     
 </body>
 </html>
